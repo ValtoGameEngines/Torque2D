@@ -172,6 +172,7 @@ SET(T2D_SRCS
 	../../source/2d/assets/ParticleAssetField.cc
 	../../source/2d/assets/ParticleAssetFieldCollection.cc
 	../../source/2d/assets/SkeletonAsset.cc
+	../../source/2d/assets/FontAsset.cc
 	../../source/2d/controllers/AmbientForceController.cc
 	../../source/2d/controllers/BuoyancyController.cc
 	../../source/2d/controllers/core/GroupedSceneController.cc
@@ -225,6 +226,10 @@ SET(T2D_SRCS
 	../../source/audio/audioDataBlock.cc
 	../../source/audio/audioStreamSourceFactory.cc
 	../../source/audio/wavStreamSource.cc
+	../../source/audio/audioDescriptions.cc
+	../../source/audio/vorbisStreamSource.cc
+	../../source/bitmapFont/BitmapFont.cc
+	../../source/bitmapFont/BitmapFontCharacter.cc
 	../../source/collection/bitTables.cc
 	../../source/collection/hashTable.cc
 	../../source/collection/undo.cc
@@ -273,14 +278,9 @@ SET(T2D_SRCS
 	../../source/graphics/TextureDictionary.cc
 	../../source/graphics/TextureHandle.cc
 	../../source/graphics/TextureManager.cc
-	../../source/gui/buttons/guiBitmapButtonCtrl.cc
-	../../source/gui/buttons/guiBorderButton.cc
-	../../source/gui/buttons/guiButtonBaseCtrl.cc
 	../../source/gui/buttons/guiButtonCtrl.cc
 	../../source/gui/buttons/guiCheckBoxCtrl.cc
-	../../source/gui/buttons/guiIconButtonCtrl.cc
 	../../source/gui/buttons/guiRadioCtrl.cc
-	../../source/gui/buttons/guiToolboxButtonCtrl.cc
 	../../source/gui/containers/guiAutoScrollCtrl.cc
 	../../source/gui/containers/guiCtrlArrayCtrl.cc
 	../../source/gui/containers/guiDragAndDropCtrl.cc
@@ -337,6 +337,7 @@ SET(T2D_SRCS
 	../../source/input/actionMap.cc
 	../../source/io/bitStream.cc
 	../../source/io/bufferStream.cc
+	../../source/io/byteBuffer.cpp
 	../../source/io/fileObject.cc
 	../../source/io/fileStream.cc
 	../../source/io/fileStreamObject.cc
@@ -505,4 +506,3 @@ ${T2D_SRCS})
 add_dependencies(Torque2D.html Assets)
 
 #em_link_js_library
-

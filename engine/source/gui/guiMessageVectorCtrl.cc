@@ -302,7 +302,7 @@ void GuiMessageVectorCtrl::createSpecialMarkers(SpecialMarkers& rSpecial, const 
          matchBuffer[499] = '\0';
          dStrcat(matchBuffer, "://");
 
-         const char* pMatch = dStrstr(pCurr, (const char*)matchBuffer);
+         const char* pMatch = dStrstr(pCurr, matchBuffer);
          if (pMatch != NULL && pMatch < pMinMatch) {
             pMinMatch = pMatch;
             minMatchType = i;
@@ -785,7 +785,7 @@ void GuiMessageVectorCtrl::findSpecialFromCoord(const Point2I& point, S32* speci
 
 void GuiMessageVectorCtrl::onMouseDown(const GuiEvent& event)
 {
-   Parent::onMouseDown(event);
+   Parent::onTouchDown(event);
    mouseUnlock();
 
    mMouseDown = true;
@@ -797,7 +797,7 @@ void GuiMessageVectorCtrl::onMouseDown(const GuiEvent& event)
 
 void GuiMessageVectorCtrl::onMouseUp(const GuiEvent& event)
 {
-   Parent::onMouseUp(event);
+   Parent::onTouchUp(event);
    mouseUnlock();
 
    // Is this an up from a dragged click?
